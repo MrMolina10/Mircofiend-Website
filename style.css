@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+  
+nav {
+    height: 80px;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+
+.link__hover-effect{
+    position: relative;
+    color: white;
+}
+
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.blue{
+    color: rgb(72, 137, 241);
+}
+
+ul {
+    display: flex;
+  }
+  
+li {
+    list-style-type: none;
+  }
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+h2 {
+    font-size: 32px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+}
+
+h3{ 
+    font-size: 25px;
+    margin-bottom: 32px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+  
+button:active {
+    transform: translateY(1px);
+}
+  
+.nav__link--primary {
+    border: 2px solid white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.nav__link--white {
+    border: 2px solid black;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: #242424;
+}
+
+.landing{
+    width: 100%;
+    height: 100vh;
+    background: url(./Mircofiend\ Logo\ .png);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 16vh;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    opacity: .2;
+    left: 0;
+    top: 0;
+    background: url(./Smoke-Effect.jpg) repeat-x;
+    background-size: 200% auto;
+    background-position: 0 bottom;
+    animation: container 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.btn{
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    padding: 6px;
+    color: rgb(251, 253, 255);
+}
+
+.nav__hours{
+    background-color: #242424;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+.header__container{
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 80px;
+  padding-top: 30px;
+}
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maps{
+    padding-top: 25px;
+}
+
+#sessions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #242424;
+}
+  
+.tabs{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+}
+
+.tabs__head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .1);
+    border-radius: 30px;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+
+.tabs__toggle{
+    margin: 0 5px;
+    padding: 7px 14px;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    text-align: center;
+}
+
+.tabs__name{
+    font-weight: 500;
+    font-size: 20px;
+    color: #484848;
+}
+
+.tabs__body{
+    background: #fff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .1);
+    border-radius: 25px;
+    padding: 30px;
+    position: relative;
+}
+
+.tabs__title{
+    font-weight: 600;
+    font-size: 28px;
+    color: #484848;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabs__text{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #484848;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.tabs__content{
+    display: none;
+}
+
+.tabs__toggle.is-active{
+    background: #e7eef8;
+}
+
+.tabs__toggle.is-active .tabs__name{
+    color: #2a61d8;
+}
+
+.tabs__content.is-active{
+    display: block;
+}
+
+.book__white{
+    color: #242424;
+}
+
+.book__now{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+footer {
+    background-color: black;
+}
+
+.footer__container{
+    padding: 56px 0;
+}
+  
+.footer__logo {
+    display: flex;
+}
+  
+.footer__logo--img {
+    width: 150px;
+}
+  
+.footer__link,
+.footer__copyright {
+    color: #fff;
+}
+  
+.footer__list {
+    margin: 20px 0 24px 0;
+}
+  
+.footer__link {
+    padding: 0 8px;
+}
+
+@keyframes container{
+    0%{background-position: -200% bottom;}
+    100%{background-position: 0% bottom;}
+}
+
